@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="font-sans">
+        <section class="lft mx-6 md:mx-24 ">
+            <nav class="flex md:container items-center font-sans py-4 mt-4">
+                <div class="pr-10">
+                    <img src="images/Logo.svg" alt="pero">
+                </div>
+                <ul class="hidden sm:flex flex-1 items-center gap-12 text-bookmark-blue">
+                    <li class="active-menu font-bold"> Features</li>
+                    <li><a href="pricing.html ">Pricing</a></li>
+                </ul>
+                <div class="flex sm:hidden flex-1 justify-end">
+                    <div class="md:hidden flex items-center">
+                        <button class="outline-none mobile-menu-button">
+                            <img src="images/Hamburger Menu.svg" alt="pero">
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="-mx-6 mobile-menu md:hidden justify-end bg-slate-50">
+                <ul class=" space-y-12 mx-12  items-end">
+                    <li class="active:font-sem font-bold  pt-12 "><a href="./index.html">Features</a></li>
+                    <li class="font-sem  pb-12"> <a href="pricing.html">Pricing</a> </li>
+                </ul>
+            </div>
+        
+      <main class="mx-5 my-16">
+        <div class="text-center">
+          <h1 class="mb-4 text-2xl font-normal md:text-3xl lg:text-4xl"><span class="font-semibold">Flexible plans for everyone</span>
+          </h1>
+          <p class="text-sm font-normal max-w-xl mx-auto text-gray-400">
+            Our plans are made for everyone. Whether you're just starting out on social media,or have been on there for a long time,we have plan that's right for you.
+          </p>
+        </div>
+    
+        <div class="flex items-center justify-center mt-10 space-x-4">
+          <span class="text-base font-medium">Bill Monthly</span>
+          <button
+                  class="relative rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  x-cloak
+                  @click="billPlan == 'monthly' ? billPlan = 'annually' : billPlan = 'monthly'"
+                  >
+            <div class="w-16 h-8 transition bg-indigo-500 rounded-full shadow-md outline-none"></div>
+            <div
+                 class="absolute inline-flex items-center justify-center w-6 h-6 transition-all duration-200 ease-in-out transform bg-white rounded-full shadow-sm top-1 left-1"
+                 :class="{ 'translate-x-0': billPlan == 'monthly', 'translate-x-8': billPlan == 'annually' }"
+                 ></div>
+          </button>
+          <span class="text-base font-medium">Bill Annually</span>
+        </div>
+    
+        <div class="hidden lg:block">
+        <div class="grid grid-cols-3 mx-auto">
+            <div class="flex flex-col items-center h-fit mt-16 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
+                <section class="flex flex-col w-30 max-w-sm p-5 space-y-6 bg-white rounded-lg shadow-md">
+                  <div class="flex-shrink-0">
+                    <span class="text-4xl font-sans ">$4</span>
+                    <span class="text-gray-400">/mo</span>
+                  </div>
+                  <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+                    <p class="text-md text-gray-400">Perfect plan if you're just starting out.</p>
+                  </div>
+                  <ul class="flex-1 space-y-4">
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Linkedin Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Twitter Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Real-Time Integration</span>
+                      </li>
+                  </ul>
+                  <div class="flex justify-center">
+                    <button type="button" class="bg-darkblue text-white py-3 px-20 rounded-md font-bold">Subscribe now</button>
+                  </div>
+                </section>
+            </div>
+
+            <div class="flex flex-col items-center h-fit mt-16 mr-16 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
+                <section class="flex flex-col w-80 max-w-sm p-5 space-y-6 bg-white rounded-lg shadow-md">
+                  <div class="flex-shrink-0">
+                    <span class="text-4xl font-sans ">$12</span>
+                    <span class="text-gray-400">/mo</span>
+                  </div>
+                  <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+                    <p class="text-md text-gray-400">Perfect plan if you're a heavy user of social media.</p>
+                  </div>
+                  <ul class="flex-1 space-y-4">
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Linkedin Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Twitter Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Instagram Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Real-Time Integration</span>
+                      </li>
+                  </ul>
+                  <div class="flex justify-center">
+                    <button type="button" class="bg-darkblue text-white py-3 px-20 rounded-md font-bold">Subscribe now</button>
+                  </div>
+                </section>
+            </div>
+            <div class="flex flex-col items-center h-fit mt-16 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
+                <section class="flex flex-col w-30 max-w-sm p-5 space-y-6 bg-white rounded-lg shadow-md">
+                  <div class="flex-shrink-0">
+                    <span class="text-4xl font-sans ">$7</span>
+                    <span class="text-gray-400">/mo</span>
+                  </div>
+                  <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+                    <p class="text-md text-gray-400">Perfect plan if you're just starting out.</p>
+                  </div>
+                  <ul class="flex-1 space-y-4">
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Linkedin Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Twitter Integration</span>
+                      </li>
+                  </ul>
+                  <div class="flex justify-center">
+                    <button type="button" class="bg-darkblue text-white py-3 px-20 rounded-md font-bold">Subscribe now</button>
+                  </div>
+                </section>
+            </div>
+            </div>
+        </div>
+        
+
+
+
+            
+        <div class="grid grid-cols-3 mx-auto ml-4">
+            <div class=" lg:hidden">
+            <div class="flex flex-col items-center h-fit mt-16 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
+                <section class="flex flex-col w-30 max-w-sm p-5 space-y-6 bg-white rounded-lg shadow-md">
+                  <div class="flex-shrink-0">
+                    <span class="text-4xl font-sans ">$4</span>
+                    <span class="text-gray-400">/mo</span>
+                  </div>
+                  <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+                    <p class="text-md text-gray-400">Perfect plan if you're just starting out.</p>
+                  </div>
+                  <ul class="flex-1 space-y-4">
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Linkedin Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Twitter Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Real-Time Integration</span>
+                      </li>
+                  </ul>
+                  <div class="flex justify-center">
+                    <button type="button" class="bg-darkblue text-white py-3 px-20 rounded-md font-bold">Subscribe now</button>
+                  </div>
+                </section>
+            </div>
+
+            <div class="flex flex-col items-center h-fit mt-16 mr-16 ml-7 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
+                <section class="flex flex-col w-80 max-w-sm p-5 space-y-6 bg-white rounded-lg shadow-md">
+                  <div class="flex-shrink-0">
+                    <span class="text-4xl font-sans ">$12</span>
+                    <span class="text-gray-400">/mo</span>
+                  </div>
+                  <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+                    <p class="text-md text-gray-400">Perfect plan if you're a heavy user of social media.</p>
+                  </div>
+                  <ul class="flex-1 space-y-4">
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Linkedin Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Twitter Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Instagram Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Real-Time Integration</span>
+                      </li>
+                  </ul>
+                  <div class="flex justify-center">
+                    <button type="button" class="bg-darkblue text-white py-3 px-20 rounded-md font-bold">Subscribe now</button>
+                  </div>
+                </section>
+            </div>
+            <div class="flex flex-col items-center h-fit mt-16 space-y-8 lg:flex-row lg:items-stretch lg:space-x-8 lg:space-y-0">
+                <section class="flex flex-col w-30 max-w-sm p-5 space-y-6 bg-white rounded-lg shadow-md">
+                  <div class="flex-shrink-0">
+                    <span class="text-4xl font-sans ">$7</span>
+                    <span class="text-gray-400">/mo</span>
+                  </div>
+                  <div class="flex-shrink-0 pb-6 space-y-2 border-b">
+                    <p class="text-md text-gray-400">Perfect plan if you're just starting out.</p>
+                  </div>
+                  <ul class="flex-1 space-y-4">
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Linkedin Integration</span>
+                      </li>
+                      <li class="flex items-start">
+                        <img src="images/Checkmark.svg" alt="">
+                        <span class="ml-3 text-base font-medium" > Twitter Integration</span>
+                      </li>
+                  </ul>
+                  <div class="flex justify-center">
+                    <button type="button" class="bg-darkblue text-white py-3 px-20 rounded-md font-bold">Subscribe now</button>
+                  </div>
+                </section>
+            </div>
+            </div>
+        </div>
+      </main>
+    </section>
+    
+      
+
+    <footer class="grid md:grid-cols-2 mx-6 my-10">
+        <div class="grid grid-cols-2 md:grid-cols-3">
+            <div class="grid-rows-3 grid-flow-row py-10">
+                <div class="my-2 font-bold text-base">Product</div>
+                <ul class="space-y-2 text-gray-600">
+                    <li>Homepage</li>
+                    <li>Pricing</li>
+                    <li>Features</li>
+                </ul>
+            </div>
+
+            <div class="grid-rows-3 grid-flow-row py-10">
+                <div class="my-2 font-bold text-base">Help</div>
+                <ul class="space-y-2 text-gray-600">
+                    <li>Live Chat</li>
+                    <li>Send Email</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+
+            <div class="grid-rows-3 py-10">
+                <div class="my-2 font-bold text-base">Product</div>
+                <ul class="space-y-2 text-gray-600">
+                    <li>About</li>
+                    <li>Customers</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <div class="my-2 font-bold text-base">Try TweetNow</div>
+            <div class="py-2 border-2 rounded-sm flex">
+                <input type="text" placeholder="Email Address" class="px-2 py-3 flex-grow">
+                <button type="button" class="bg-darkblue text-white py-3 px-4 rounded-md font-bold">Start Scheduling</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
